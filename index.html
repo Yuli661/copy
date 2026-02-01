@@ -34,78 +34,160 @@
         }
 
         header {
-            padding: 120px 0 80px 0; /* Увеличен верхний паддинг */
+            padding: 120px 0 80px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .section-title {
-            font-size: 14px; /* Уменьшен размер */
+            font-size: 14px;
             font-weight: 500;
             letter-spacing: 0.05em;
             color: #aaa;
-            margin-bottom: 24px; /* Увеличен отступ */
+            margin-bottom: 24px;
             text-transform: uppercase;
         }
 
         h1 {
-            font-size: 84px; /* Увеличен размер */
+            font-size: 84px;
             font-weight: 300;
-            line-height: 1.0; /* Более плотный межстрочный интервал */
-            letter-spacing: -0.03em; /* Немного увеличено сжатие букв */
-            max-width: 900px; /* Увеличена максимальная ширина */
-            margin-bottom: 32px; /* Уменьшен отступ снизу */
+            line-height: 1.0;
+            letter-spacing: -0.03em;
+            max-width: 900px;
+            margin-bottom: 32px;
             color: #ffffff;
         }
 
         .lead-text {
-            font-size: 24px; /* Увеличен размер */
+            font-size: 24px;
             color: #cccccc;
-            max-width: 700px; /* Увеличена ширина */
-            margin-bottom: 20px; /* Уменьшен отступ */
+            max-width: 700px;
+            margin-bottom: 20px;
             font-weight: 300;
             line-height: 1.4;
         }
 
         .sub-text {
-            font-size: 20px; /* Увеличен размер */
+            font-size: 20px;
             color: #aaaaaa;
-            max-width: 700px; /* Увеличена ширина */
-            margin-bottom: 0; /* Убран нижний отступ */
+            max-width: 700px;
+            margin-bottom: 0;
             font-weight: 300;
             line-height: 1.4;
         }
 
         main {
-            padding: 160px 0 120px 0; /* Увеличен верхний паддинг, уменьшен нижний */
+            padding: 160px 0 120px 0;
             display: flex;
             flex-direction: column;
-            gap: 200px; /* Увеличен промежуток между секциями */
+            gap: 200px;
         }
 
-        .section {
+        /* Стили для галереи комнат */
+        .rooms-gallery {
             display: flex;
             flex-direction: column;
+            gap: 200px;
         }
 
-        .section-header {
-            margin-bottom: 0; /* Убран отступ снизу */
-            max-width: 800px; /* Ограничена ширина заголовка */
+        .room-item {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
-        .section-header .section-title {
-            margin-bottom: 20px; /* Уменьшен отступ */
+        .room-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
         }
 
-        .section-header h2 {
-            font-size: 60px; /* Увеличен размер */
+        .room-title {
+            font-size: 32px;
             font-weight: 300;
-            line-height: 1.1; /* Более плотный межстрочный интервал */
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            max-width: 600px;
+        }
+
+        .room-price {
+            font-size: 18px;
+            font-weight: 400;
+            color: #aaaaaa;
+            text-align: right;
+        }
+
+        .room-price .amount {
+            display: block;
+            font-size: 24px;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .room-image-placeholder {
+            height: 600px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .room-image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.03) 50%, transparent 60%);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Стили для FAQ секции */
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            gap: 120px;
+        }
+
+        .faq-header .section-title {
+            margin-bottom: 20px;
+        }
+
+        .faq-header h2 {
+            font-size: 60px;
+            font-weight: 300;
+            line-height: 1.1;
             letter-spacing: -0.02em;
             color: #ffffff;
+            max-width: 800px;
         }
 
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px 40px;
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            color: #aaaaaa;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Секция с кнопкой */
         .cta-section {
-            padding: 100px 0 140px 0; /* Увеличены паддинги */
+            padding: 100px 0 140px 0;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
@@ -116,7 +198,7 @@
             color: #0a0a0a;
             font-size: 16px;
             font-weight: 500;
-            padding: 20px 40px; /* Увеличены паддинги */
+            padding: 20px 40px;
             border-radius: 50px;
             text-decoration: none;
             letter-spacing: 0.01em;
@@ -129,32 +211,42 @@
             color: #ffffff;
         }
 
+        /* Футер */
         .footer-note {
             text-align: center;
-            padding: 60px 0 80px 0; /* Увеличены паддинги */
+            padding: 60px 0 80px 0;
             color: #888888;
-            font-size: 15px; /* Немного увеличен размер */
+            font-size: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             font-weight: 300;
             line-height: 1.6;
-            max-width: 500px; /* Ограничена ширина текста */
-            margin: 0 auto; /* Центрирование */
+            max-width: 500px;
+            margin: 0 auto;
         }
 
-        /* Медиа-запросы для адаптивности */
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Адаптивность */
         @media (max-width: 1024px) {
             h1 {
                 font-size: 72px;
             }
             
-            .section-header h2 {
+            .faq-header h2 {
                 font-size: 52px;
+            }
+            
+            .faq-grid {
+                gap: 60px 32px;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 0 32px; /* Немного уменьшен боковой паддинг */
+                padding: 0 32px;
             }
 
             header {
@@ -184,9 +276,38 @@
                 gap: 140px;
             }
 
-            .section-header h2 {
+            .rooms-gallery {
+                gap: 120px;
+            }
+
+            .room-title {
+                font-size: 28px;
+            }
+
+            .room-price {
+                font-size: 16px;
+            }
+
+            .room-price .amount {
+                font-size: 20px;
+            }
+
+            .room-image-placeholder {
+                height: 400px;
+            }
+
+            .faq-section {
+                gap: 80px;
+            }
+
+            .faq-header h2 {
                 font-size: 40px;
                 line-height: 1.1;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
             }
 
             .cta-section {
@@ -226,8 +347,37 @@
                 gap: 100px;
             }
 
-            .section-header h2 {
+            .rooms-gallery {
+                gap: 80px;
+            }
+
+            .room-info {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .room-title {
+                font-size: 24px;
+            }
+
+            .room-price {
+                text-align: left;
+            }
+
+            .room-image-placeholder {
+                height: 300px;
+            }
+
+            .faq-header h2 {
                 font-size: 32px;
+            }
+
+            .faq-item h3 {
+                font-size: 18px;
+            }
+
+            .faq-item p {
+                font-size: 15px;
             }
 
             .cta-button {
@@ -253,10 +403,79 @@
         </header>
 
         <main>
-            <section class="section">
-                <div class="section-header">
+            <!-- Галерея комнат -->
+            <section class="rooms-gallery">
+                <div class="room-item">
+                    <div class="room-info">
+                        <h3 class="room-title">The Minimalist Suite</h3>
+                        <div class="room-price">
+                            <span class="amount">$320</span>
+                            per night
+                        </div>
+                    </div>
+                    <div class="room-image-placeholder"></div>
+                </div>
+
+                <div class="room-item">
+                    <div class="room-info">
+                        <h3 class="room-title">The Heritage Room</h3>
+                        <div class="room-price">
+                            <span class="amount">$280</span>
+                            per night
+                        </div>
+                    </div>
+                    <div class="room-image-placeholder"></div>
+                </div>
+
+                <div class="room-item">
+                    <div class="room-info">
+                        <h3 class="room-title">The Vista Suite</h3>
+                        <div class="room-price">
+                            <span class="amount">$380</span>
+                            per night
+                        </div>
+                    </div>
+                    <div class="room-image-placeholder"></div>
+                </div>
+            </section>
+
+            <!-- FAQ секция -->
+            <section class="faq-section">
+                <div class="faq-header">
                     <div class="section-title">/ FAQ</div>
                     <h2>Everything you need to know to plan a seamless and comfortable stay at Bellavista.</h2>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>What time is check-in and check-out?</h3>
+                        <p>Check-in is from 3:00 PM, and check-out is by 11:00 AM. Early check-in and late check-out may be available upon request and are subject to availability.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Is parking available?</h3>
+                        <p>Yes, we offer valet parking for all guests at $45 per night. Self-parking is also available in the nearby garage at a discounted rate of $35 per night.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Do you offer room service?</h3>
+                        <p>Room service is available daily from 6:00 AM to 11:00 PM. Our menu features locally sourced ingredients and seasonal specialties.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What is your cancellation policy?</h3>
+                        <p>Cancellations made 72 hours or more prior to arrival receive a full refund. Cancellations within 72 hours are subject to a one-night charge.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Are pets allowed?</h3>
+                        <p>We welcome dogs under 50 pounds with a non-refundable pet fee of $150 per stay. Please notify us in advance if you plan to bring a pet.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Is breakfast included?</h3>
+                        <p>Yes, a complimentary breakfast is included for all guests and is served daily from 7:00 AM to 10:30 AM in our garden restaurant.</p>
+                    </div>
                 </div>
             </section>
         </main>
