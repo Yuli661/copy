@@ -34,7 +34,7 @@
         }
 
         header {
-            padding: 120px 0 80px 0;
+            padding: 120px 0 60px 0; /* Уменьшен нижний отступ */
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -61,22 +61,29 @@
             font-size: 24px;
             color: #cccccc;
             max-width: 700px;
-            margin-bottom: 20px;
+            margin-bottom: 60px; /* Увеличен отступ для картинки */
             font-weight: 300;
             line-height: 1.4;
         }
 
-        .sub-text {
-            font-size: 20px;
-            color: #aaaaaa;
-            max-width: 700px;
-            margin-bottom: 0;
-            font-weight: 300;
-            line-height: 1.4;
+        /* Стили для баннера-картинки */
+        .hero-banner {
+            width: 100%;
+            height: 350px; /* В 2 раза меньше (было ~600-700px) */
+            margin: 0 auto 80px auto; /* Центрирование и отступ снизу */
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Картинка заполняет область без искажений */
+            display: block;
         }
 
         main {
-            padding: 160px 0 120px 0;
+            padding: 80px 0 120px 0; /* Уменьшен верхний отступ */
             display: flex;
             flex-direction: column;
             gap: 200px;
@@ -242,6 +249,10 @@
             .faq-grid {
                 gap: 60px 32px;
             }
+            
+            .hero-banner {
+                height: 300px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -250,7 +261,7 @@
             }
 
             header {
-                padding: 80px 0 60px 0;
+                padding: 80px 0 40px 0;
             }
 
             .section-title {
@@ -265,14 +276,16 @@
 
             .lead-text {
                 font-size: 20px;
+                margin-bottom: 40px;
             }
 
-            .sub-text {
-                font-size: 18px;
+            .hero-banner {
+                height: 250px;
+                margin-bottom: 60px;
             }
 
             main {
-                padding: 100px 0 80px 0;
+                padding: 60px 0 80px 0;
                 gap: 140px;
             }
 
@@ -321,7 +334,7 @@
             }
 
             header {
-                padding: 60px 0 40px 0;
+                padding: 60px 0 30px 0;
             }
 
             .section-title {
@@ -336,14 +349,16 @@
 
             .lead-text {
                 font-size: 18px;
+                margin-bottom: 30px;
             }
 
-            .sub-text {
-                font-size: 16px;
+            .hero-banner {
+                height: 180px;
+                margin-bottom: 40px;
             }
 
             main {
-                padding: 60px 0;
+                padding: 40px 0 60px 0;
                 gap: 100px;
             }
 
@@ -401,8 +416,10 @@
             <p class="lead-text">Thoughtfully designed spaces to match the way you stay</p>
         </header>
 
-<img src="BRp2qoXpAS5uvesijBnvnCghQg.avif" alt="The Minimalist Suite" class="room-image">
-
+        <!-- Банер-картинка (в 2 раза меньше) -->
+        <div class="hero-banner">
+            <img src="BRp2qoXpAS5uvesijBnvnCghQg.avif" alt="Bellavista Hotel Room">
+        </div>
         
         <main>
             <!-- Галерея комнат -->
